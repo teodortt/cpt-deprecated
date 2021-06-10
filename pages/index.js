@@ -115,7 +115,7 @@ export default function Home() {
 
               <div className="card card-v">
                 <span className="d-flex justify-content-center">
-                  <div className="mr-5 mt-3 trending">Trending</div>
+                  <div className="mr-5 mt-3 trending text-uppercase">Trending</div>
                   <div className="ml-5 mt-3 font-weight-bold text-muted">$53/2h</div>
                 </span>
                 <small style={{ marginLeft: 180, marginTop: '-7px', color: '#babbbb' }}>per person</small>
@@ -129,7 +129,7 @@ export default function Home() {
 
               <div className="card card-v">
                 <span className="d-flex justify-content-center">
-                  <div className="mr-5 mt-3 trending">Trending</div>
+                  <div className="mr-5 mt-3 trending text-uppercase">Trending</div>
                   <div className="ml-5 mt-3 font-weight-bold text-muted">$53/2h</div>
                 </span>
                 <small style={{ marginLeft: 180, marginTop: '-7px', color: '#babbbb' }}>per person</small>
