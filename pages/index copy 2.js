@@ -1,5 +1,5 @@
 import Head from 'next/head'
-// import Image from 'next/image'
+import Image from 'next/image'
 import 'bootstrap/dist/css/bootstrap.min.css'
 // import styles from '../styles/Home.module.css'
 import React, { useState, useEffect } from 'react'
@@ -33,10 +33,10 @@ export default function Home() {
         <nav className={`navbar ${scrollY > 10 ? 'active' : ''} navbar-expand-lg fixed-top py-1`}>
           <div className="container">
             <a href="#" className="navbar-brand text-uppercase font-weight-bold">
-              {width < 991 ? <img className="cpt-logo" src="/images/logo.png" /> :
+              {width < 991 ? <Image className="cpt-logo" src="/images/logo.png" width={87} height={50} /> :
                 <>
-                  {scrollY > 10 ? <img className="cpt-logo" src="/images/logo.png" /> :
-                    <img className="cpt-logo" width='150' src="/images/logo-white-full.png" />}
+                  {scrollY > 10 ? <Image className="cpt-logo" src="/images/logo.png" width={87} height={50} /> :
+                    <Image className="cpt-logo" width={150} height={100} src="/images/logo-white-full.png" />}
                 </>
               }
             </a>
@@ -120,7 +120,7 @@ export default function Home() {
                 </span>
                 <small style={{ marginLeft: 180, marginTop: '-7px', color: '#babbbb' }}>per person</small>
 
-                <img className="card-img-top p-3" src="/images/bike-tours.png" alt="Card image cap" />
+                <Image className="card-Image-top p-3" src="/images/bike-tours.png" width={500} height={400} alt="Card image cap" />
                 <div className="card-body" style={{ marginTop: -20 }}>
                   <h5 style={{ color: '#535150' }} className="card-title font-weight-bold pb-3">Central Park E-Bike Tour</h5>
                   <p className="btn-reserve text-uppercase">Reserve now</p>
@@ -134,7 +134,7 @@ export default function Home() {
                 </span>
                 <small style={{ marginLeft: 180, marginTop: '-7px', color: '#babbbb' }}>per person</small>
 
-                <img className="card-img-top p-3" src="/images/electric-bike.png" alt="Card image cap" />
+                <Image className="card-Image-top p-3" src="/images/electric-bike.png" width={500} height={400} alt="Card image cap" />
                 <div className="card-body" style={{ marginTop: -20 }}>
                   <h5 style={{ color: '#535150' }} className="card-title font-weight-bold pb-3">Central Park E-Bike Tour</h5>
                   <p className="btn-reserve text-uppercase">Reserve now</p>
@@ -148,7 +148,7 @@ export default function Home() {
                 </span>
                 <small style={{ marginLeft: 180, marginTop: '-7px', color: '#babbbb' }}>per person</small>
 
-                <img className="card-img-top p-3" src="/images/pedicab-tours.png" alt="Card image cap" />
+                <Image className="card-Image-top p-3" src="/images/pedicab-tours.png" width={500} height={400} alt="Card image cap" />
                 <div className="card-body" style={{ marginTop: -20 }}>
                   <h5 style={{ color: '#535150' }} className="card-title font-weight-bold pb-3">Central Park E-Bike Tour</h5>
                   <p className="btn-reserve text-uppercase">Reserve now</p>
