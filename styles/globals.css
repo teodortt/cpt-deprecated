@@ -56,7 +56,8 @@ a {
 
 @media (max-width: 540px) {
   .pt1 {
-    padding-top: 100px;
+    padding-top: 45%;
+    /* paddong-top:100px; */
     padding-bottom: 300px;
   }
 }
