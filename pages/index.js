@@ -81,7 +81,7 @@ export default function Home() {
             </span>
             <div className="pt-4 mx-auto">
               <i className="fa fa-phone fa-rotate-90" aria-hidden="true"></i>
-               Book over the phone: (347) 746-8687
+              <span className="pl-2">Book over the phone: (347) 746-8687</span>
             </div>
 
           </section>
