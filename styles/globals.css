@@ -28,6 +28,66 @@ a {
 
 } */
 
+.btn-about {
+  background: #88bc2c;
+  border-radius: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  transition: 0.5s;
+}
+
+.btn-about:hover {
+  background: #00bcd4;
+}
+
+.about-img {
+  width: 500px;
+  margin-top: -70%;
+}
+
+.first, .second {
+  display: inline-block;
+  max-width: 50%;
+  /* padding-right: 50px; */
+}
+
+@media (min-width: 1295px) {
+  .first {
+    padding-right: 150px;
+    padding-left: 150px;
+  }
+}
+
+@media (max-width: 991px) {
+  .fl-box {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .first, .second {
+    display: inline-block;
+    max-width: 100%;
+    /* padding-right: 0; */
+  }
+  .about-img {
+    margin-top: 0;
+    padding: 10px;
+    width: 60%;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-img {
+    width: 90%;
+  }
+}
+
+.about {
+  margin-top: -300px;
+}
+
 .trending {
   text-align: center;
   background: #ff743d;
@@ -39,9 +99,9 @@ a {
 }
 
 .home-hr {
-  height: 7px;
+  height: 8px;
   width: 25%;
-  background: #9bd230;
+  background: #88bc2c;
   border-radius: 10px;
 }
 
@@ -56,7 +116,8 @@ a {
 
 @media (max-width: 540px) {
   .pt1 {
-    padding-top: 100px;
+    padding-top: 45%;
+    /* paddong-top:100px; */
     padding-bottom: 300px;
   }
 }
@@ -92,19 +153,19 @@ a {
 
 .btn-reserve {
   background: white;
-  border: 1px solid #9bd230;
+  border: 1px solid #88bc2c;
   border-radius: 10px;
   padding: 10px;
   width: 220px;
   margin: 0 auto;
-  color: #9bd230;
+  color: #88bc2c;
   font-weight: 700;
   transition: 0.2s;
   cursor: pointer;
 }
 
 .btn-reserve:hover {
-  background: #9bd230;
+  background: #88bc2c;
   color: white;
 }
 
@@ -120,10 +181,10 @@ a {
 
 @media (min-width: 991.98px) {
   .btn-cpt {
-    background: #9bd230;
+    background: #88bc2c;
     border-radius: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
     margin-left: 20px;
     color: white;
     transition: 0.5s;
@@ -167,6 +228,23 @@ a {
   right: 0;
   width: 100%;
   height: 100%;
+  /* zoom: 0.8; */
+}
+
+.video {
+  position: absolute;
+  object-fit: cover;
+  filter: brightness(70%);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /* content: ""; */
+  /* display: block; */
+  /* top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; */
   /* zoom: 0.8; */
 }
 
