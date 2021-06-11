@@ -218,7 +218,7 @@ a {
 }
 
 .bg-cpt {
-  background: url("/images/cpt1-dark.jpg") no-repeat center center;
+  /* background: url("/images/cpt1-dark.jpg") no-repeat center center; */
   content: "";
   display: block;
   position: absolute;
