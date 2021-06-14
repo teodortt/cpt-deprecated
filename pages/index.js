@@ -362,7 +362,7 @@ export default function Home() {
 
               <div className="col">
 
-                <form onSubmit={handleSubmit} className="contact-form">
+                {/* <form onSubmit={handleSubmit} className="contact-form">
                   <ReCAPTCHA
                     ref={recaptchaRef}
                     size="invisible"
@@ -386,7 +386,7 @@ export default function Home() {
                   </textarea>
 
                   <button className="btn-contact text-uppercase mt-5">Submit Request</button>
-                </form>
+                </form> */}
 
 
               </div>
