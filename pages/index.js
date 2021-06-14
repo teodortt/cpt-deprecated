@@ -3,15 +3,58 @@ import Head from 'next/head'
 import 'bootstrap/dist/css/bootstrap.min.css'
 // import styles from '../styles/Home.module.css'
 import React, { useState, useEffect } from 'react'
+import { Tabs } from 'antd'
+import dynamic from 'next/dynamic'
+import ReCAPTCHA from "react-google-recaptcha"
+
+
+const CarouselTabs = dynamic(() => import('../components/CarouselTabs'),
+  { ssr: false }
+)
+
+const { TabPane } = Tabs;
 
 export default function Home() {
+  const recaptchaRef = React.createRef();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Execute the reCAPTCHA when the form is submitted
+    recaptchaRef.current.execute();
+  };
+
+  const onReCAPTCHAChange = (captchaCode) => {
+    // If the reCAPTCHA code is null or undefined indicating that
+    // the reCAPTCHA was expired then return early
+    if (!captchaCode) {
+      return;
+    }
+    // Else reCAPTCHA was executed successfully so proceed with the 
+    // alert
+    alert(`Hey!`);
+    // alert(`Hey, ${email}`);
+
+    // Reset the reCAPTCHA so that it can be executed again if user 
+    // submits another email.
+    recaptchaRef.current.reset();
+  }
+
+  if (typeof window === 'undefined') {
+    global.window = {}
+  }
+  //force scroll to top on page refresh
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  }
 
   const [menu, setMenu] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   const [width, setWidth] = useState(0);
   function logit() {
-    setScrollY(window.pageYOffset);
-    // console.log(scrollY);
+    if (window.pageYOffset < 500) {
+      setScrollY(window.pageYOffset);
+      console.log(scrollY);
+    }
   }
 
   useEffect(() => {
@@ -25,17 +68,57 @@ export default function Home() {
     };
   });
 
+  // Tabs Component
+  const TabsComponent = () => {
+    const [keys, setKey] = useState('1');
+
+    function callback(key) {
+      console.log(key);
+      setKey(key);
+    }
+    return (
+      <Tabs
+        defaultActiveKey="1"
+        onChange={callback}
+      >
+        <TabPane tab={<button className={`btn-tab py-1 ${width > 600 ? 'py-2 mx-3' : 'py-1 mx-1'} ${keys === '1' ? 'active-t' : ''} text-uppercase`}>Recent</button>} key="1">
+          {/* Content of Tab Pane 1 */}
+          <div className="pb-5 mb-5">
+            <CarouselTabs />
+          </div>
+
+        </TabPane>
+
+        <TabPane tab={<button className={`btn-tab py-1 ${width > 600 ? 'py-2 mx-3' : 'py-1 mx-1'} ${keys === '2' ? 'active-t' : ''} text-uppercase`}>Events</button>} key="2">
+          {/* Content of Tab Pane 2 */}
+          {/* splide js carousel */}
+          <div className="pb-5 mb-5">
+            <CarouselTabs />
+          </div>
+
+        </TabPane>
+
+        <TabPane tab={<button className={`btn-tab py-1 ${width > 600 ? 'py-2 mx-3' : 'py-1 mx-1'} ${keys === '3' ? 'active-t' : ''} text-uppercase`}>Things to do</button>} key="3">
+          {/* Content of Tab Pane 3 */}
+          <div className="pb-5 mb-5">
+            <CarouselTabs />
+          </div>
+        </TabPane>
+      </Tabs >
+    );
+  }
+
   return (
     <div>
       <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
       <header className="header">
-        <nav className={`navbar ${scrollY > 10 ? 'active' : ''} navbar-expand-lg fixed-top py-1`}>
+        <nav className={`navbar ${window.pageYOffset > 10 ? 'active' : ''} navbar-expand-lg fixed-top py-1`}>
           <div className="container">
             <a href="#" className="navbar-brand text-uppercase font-weight-bold">
               {width < 991 ? <img className="cpt-logo" src="/images/logo.png" /> :
                 <>
-                  {scrollY > 10 ? <img className="cpt-logo" src="/images/logo.png" /> :
+                  {window.pageYOffset > 10 ? <img className="cpt-logo" src="/images/logo.png" /> :
                     <img className="cpt-logo" width='150' src="/images/logo-white-full.png" />}
                 </>
               }
@@ -61,18 +144,13 @@ export default function Home() {
       <div className="container-fluid bg-cpt pl-0 pr-0">
 
 
-        <video autoplay="true" muted
+        <video autoPlay="true" muted
           className="video"
           loop id="myVideo">
           <source src="https://cdn-cf-east.streamable.com/video/mp4/m7bc6d.mp4?Expires=1623665940&Signature=BiVRzgMKni-exdBmeRWl77mJ5ef0iY7hlUYM8U54Mvc0Pnw4N4smYpj0UdXjrVXpORrDFdSu0dopmb4OkGVKcd-hpsBNg2MXKhOuYRw8KoYNfNB5PUFKPBgMVaBQLtCDMvRa5eZ55VWP-YvOWdYIMfdfoTlJcd-LpL3Q5RNBsQI-rfC1N~JpZ9bRp41yTbPvEW4bCAKvnAaT5iY5dJ5AYoBwCjcwbt7Bqb8ODusWXyAWhXA5yXIZD2Ll8NK5MDR9Mrz0eGQ2N~hlMh0lL30Gxs1vdk4Fd0NrC8TMuTFmKVeR0FK6MuHZ6cLRnmgrz7AOubpZL5Ri8-WEj3jIAgJSbg__&Key-Pair-Id=APKAIEYUVEN4EVB2OKEQ"
 
             type="video/mp4" />
         </video>
-
-
-
-
-
 
         <div className="pt-5 text-white text-center" style={{ position: "relative" }}>
           <header className="py-5 mt-5">
@@ -187,9 +265,9 @@ export default function Home() {
 
             <div className="container-fluid" style={{ background: '#f9f9f8', color: '#707171' }}>
 
-              <div class="fl-box">
+              <div className="fl-box">
 
-                <div class="first text-left mx-auto">
+                <div className="first text-left mx-auto">
                   <small className="h4 font-weight-normal" style={{ color: '#535150' }}>Learn more</small>
                   <h3 className="pt-2 pb-4 h1" style={{ fontWeight: 800, color: '#3d3d3c' }}>About Us</h3>
                   <p><b>We are thrilled to introduce you to one of the world’s most beautiful parks - Central Park.</b></p>
@@ -208,7 +286,7 @@ export default function Home() {
                      </i>
                 </div>
 
-                <div class="second">
+                <div className="second">
                   <img src="/images/about.png" className="about-img" />
                 </div>
 
@@ -220,20 +298,79 @@ export default function Home() {
 
               </div>
 
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f9f9f8" fill-opacity="1" d="M0,288L80,256C160,224,320,160,480,154.7C640,149,800,203,960,224C1120,245,1280,235,1360,229.3L1440,224L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
+          </section>
+
+          {/* tabs section*/}
+          <section>
+            <div className="container text-dark">
+              <h3 className="pb-1 h1" style={{ fontWeight: 900 }}>Latest posts</h3>
+              <p>
+                Learn more about upcoming events in Central Park, news,
+                <br></br>
+                concerts in the Summerstage, yoga in the park and many more.
+              </p>
+              <TabsComponent />
+            </div>
+          </section>
+
+          {/* contact section */}
+          <section className="container text-dark">
+            <div className="row contact-fl">
+
+              <div className="col text-left">
+
+                <small className="h4 font-weight-normal" style={{ color: '#535150' }}>Get in touch</small>
+                <h3 className="pt-2 pb-4 h1" style={{ fontWeight: 800, color: '#3d3d3c' }}>Contact Us</h3>
+
+                <p className="pr5">Feel free to shoot us a message if you have any<br></br> questions about the park
+                or the services that we offer.<br></br> We can also help with arrangements for
+                picnic in<br></br> Central Park, special events, weddings, boating in<br></br> Central Park
+                     and many more!</p>
+                <br></br>
+
+                <div class="d-flex align-items-center">
+
+                  <div>
+                    <div className="col-sm-1">
+                      <i class="fas fa-map-marker-alt fa-lg" style={{ paddingBottom: 70 }}></i>
+                      <br></br>
+                      <i class="fas fa-phone-alt fa-lg"></i>
+                    </div>
+                  </div>
+
+                  <div>
+
+                    <div className="col-sm-11">
+                      <p className="font-bold">
+                        Fancy Apple Bike Store
+                        <br></br>
+                          870 7th Ave, New York, NY, 10019
+                        <br></br>
+                        <a style={{ color: '#01bdd4', fontWeight: 600, textTransform: 'uppercase' }} target="_blank" href="https://goo.gl/maps/1QDYzUAbTWbSxe4e6">Get Directions</a>
+                      </p>
+                      <p>Office - (347) 746 - 8687
+                        <br></br>
+                        <a style={{ color: '#01bdd4', fontWeight: 600, textTransform: 'uppercase' }} target="_blank" href="tel:347-746-8687">Call Now</a>
+                      </p>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <div className="col">
+
+
+
+              </div>
+
 
             </div>
 
-
-
-
-            {/* <div class="d-flex justify-content-start text-dark">aaspdosdspdoaspdoaspodaposdopasdopasaaspdosdspdoaspdoaspodaposdopasdopasaaspdosdspdoaspdoaspodaposdopasdopasaaspdosdspdoaspdoaspodaposdopasdopasaaspdosdspdoaspdoaspodaposdopasdopasaaspdosdspdoaspdoaspodaposdopasdopasaaspdosdspdoaspdoaspodaposdopasdopasaaspdosdspdoaspdoaspodaposdopasdopas</div>
-            <div class="d-flex justify-content-end text-dark">...</div> */}
-
-
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f9f9f8" fill-opacity="1" d="M0,288L80,256C160,224,320,160,480,154.7C640,149,800,203,960,224C1120,245,1280,235,1360,229.3L1440,224L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
-
-
           </section>
+
 
         </div>
       </div>
