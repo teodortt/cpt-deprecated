@@ -43,9 +43,9 @@ export default function Home() {
     global.window = {}
   }
   //force scroll to top on page refresh
-  // window.onbeforeunload = function () {
-  //   window.scrollTo(0, 0);
-  // }
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  }
 
   const [menu, setMenu] = useState(false);
   const [scrollY, setScrollY] = useState(0);
@@ -366,7 +366,8 @@ export default function Home() {
                   <ReCAPTCHA
                     ref={recaptchaRef}
                     size="invisible"
-                    sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                    sitekey='6LeNHDEbAAAAAFn_EMsnUl30BrWIn41fOgjIP8ow'
+                    // sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
                     onChange={onReCAPTCHAChange}
                   />
                   <img className="cpt-circle" src="/images/cpt-circle.png" />
