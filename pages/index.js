@@ -293,7 +293,7 @@ export default function Home() {
               </div>
 
               <div className="container d-flex text-uppercase" style={{ paddingLeft: 100 }}>
-                <div className="btn-about mr-5">Book a tour</div>
+                <div className="btn-about">Book a tour</div>
                 <a className="pt-2" href="google.bg"><b className="text-dark">Our Blog</b></a>
 
               </div>
@@ -362,6 +362,30 @@ export default function Home() {
 
               <div className="col">
 
+                <form onSubmit={handleSubmit} className="contact-form">
+                  <ReCAPTCHA
+                    ref={recaptchaRef}
+                    size="invisible"
+                    sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                    onChange={onReCAPTCHAChange}
+                  />
+                  <img className="cpt-circle" src="/images/cpt-circle.png" />
+                  <div className="d-flex pb-5">
+                    <input type="text" className="form-control mr-3" placeholder="First name" />
+                    <input type="text" className="form-control" placeholder="Last name" />
+                  </div>
+
+                  <div className="d-flex pb-4">
+                    <input type="email" className="form-control mr-3" placeholder="Email" />
+                    <input type="number" className="form-control" placeholder="Phone" />
+                  </div>
+
+                  <textarea className="form-control" placeholder="Message">
+
+                  </textarea>
+
+                  <button className="btn-contact text-uppercase mt-5">Submit Request</button>
+                </form>
 
 
               </div>
