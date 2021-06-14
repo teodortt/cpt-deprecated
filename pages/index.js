@@ -51,10 +51,10 @@ export default function Home() {
   const [scrollY, setScrollY] = useState(0);
   const [width, setWidth] = useState(0);
   function logit() {
-    // if (window.pageYOffset < 500) {
-    setScrollY(window.pageYOffset);
-    console.log(scrollY);
-    // }
+    if (window.pageYOffset < 500) {
+      setScrollY(window.pageYOffset);
+      console.log(scrollY);
+    }
   }
 
   useEffect(() => {
@@ -113,12 +113,12 @@ export default function Home() {
       <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
       <header className="header">
-        <nav className={`navbar ${scrollY > 10 ? 'active' : ''} navbar-expand-lg fixed-top py-1`}>
+        <nav className={`navbar ${window.pageYOffset > 10 ? 'active' : ''} navbar-expand-lg fixed-top py-1`}>
           <div className="container">
             <a href="#" className="navbar-brand text-uppercase font-weight-bold">
               {width < 991 ? <img className="cpt-logo" src="/images/logo.png" /> :
                 <>
-                  {scrollY > 10 ? <img className="cpt-logo" src="/images/logo.png" /> :
+                  {window.pageYOffset > 10 ? <img className="cpt-logo" src="/images/logo.png" /> :
                     <img className="cpt-logo" width='150' src="/images/logo-white-full.png" />}
                 </>
               }
