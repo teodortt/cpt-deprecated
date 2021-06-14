@@ -1,0 +1,31 @@
+import React, { useState } from 'react';
+import { Tabs } from 'antd';
+const { TabPane } = Tabs;
+
+export const TabsComponent = () => {
+    const [keys, setKey] = useState('1');
+
+    function callback(key) {
+        console.log(key);
+        setKey(keys);
+    }
+    return (
+        <Tabs
+            defaultActiveKey="1"
+            onChange={callback}
+            centered
+        >
+            <TabPane tab={<button className={`btn-tab py-1 ${width > 600 ? 'py-2 mx-3' : 'py-1 mx-1'} ${keys === '1' ? 'active-t' : ''} text-uppercase`}>Recent</button>} key="1">
+                Content of Tab Pane 1
+    </TabPane>
+
+            <TabPane tab={<button className={`btn-tab py-1 ${width > 600 ? 'py-2 mx-3' : 'py-1 mx-1'} ${keys === '2' ? 'active-t' : ''} text-uppercase`}>Events</button>} key="2">
+                Content of Tab Pane 2
+    </TabPane>
+
+            <TabPane tab={<button className={`btn-tab py-1 ${width > 600 ? 'py-2 mx-3' : 'py-1 mx-1'} ${keys === '3' ? 'active-t' : ''} text-uppercase`}>Things to do</button>} key="3">
+                Content of Tab Pane 3
+    </TabPane>
+        </Tabs>
+    );
+};

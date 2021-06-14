@@ -1,22 +1,23 @@
 import Head from 'next/head'
+import dynamic from 'next/dynamic'
 // import Image from 'next/image'
 import 'bootstrap/dist/css/bootstrap.min.css'
 // import styles from '../styles/Home.module.css'
 import React, { useState, useEffect } from 'react'
 import { Tabs } from 'antd'
-import dynamic from 'next/dynamic'
 import ReCAPTCHA from "react-google-recaptcha"
-
-
-const CarouselTabs = dynamic(() => import('../components/CarouselTabs'),
-  { ssr: false }
-)
+import CarouselTabs from '../components/CarouselTabs'
 
 const { TabPane } = Tabs;
 
 export default function Home() {
-  const recaptchaRef = React.createRef();
 
+  //force scroll to top on page refresh
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  }
+
+  const recaptchaRef = React.createRef();
   const handleSubmit = (event) => {
     event.preventDefault();
     // Execute the reCAPTCHA when the form is submitted
@@ -39,19 +40,11 @@ export default function Home() {
     recaptchaRef.current.reset();
   }
 
-  if (typeof window === 'undefined') {
-    global.window = {}
-  }
-  //force scroll to top on page refresh
-  window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-  }
-
   const [menu, setMenu] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   const [width, setWidth] = useState(0);
   function logit() {
-    if (window.pageYOffset < 500) {
+    if (window.pageYOffset < 250) {
       setScrollY(window.pageYOffset);
       console.log(scrollY);
     }
@@ -67,6 +60,7 @@ export default function Home() {
       window.removeEventListener("scroll", logit);
     };
   });
+
 
   // Tabs Component
   const TabsComponent = () => {
@@ -84,7 +78,9 @@ export default function Home() {
         <TabPane tab={<button className={`btn-tab py-1 ${width > 600 ? 'py-2 mx-3' : 'py-1 mx-1'} ${keys === '1' ? 'active-t' : ''} text-uppercase`}>Recent</button>} key="1">
           {/* Content of Tab Pane 1 */}
           <div className="pb-5 mb-5">
+
             <CarouselTabs />
+
           </div>
 
         </TabPane>
@@ -93,6 +89,8 @@ export default function Home() {
           {/* Content of Tab Pane 2 */}
           {/* splide js carousel */}
           <div className="pb-5 mb-5">
+
+
             <CarouselTabs />
           </div>
 
@@ -101,6 +99,7 @@ export default function Home() {
         <TabPane tab={<button className={`btn-tab py-1 ${width > 600 ? 'py-2 mx-3' : 'py-1 mx-1'} ${keys === '3' ? 'active-t' : ''} text-uppercase`}>Things to do</button>} key="3">
           {/* Content of Tab Pane 3 */}
           <div className="pb-5 mb-5">
+
             <CarouselTabs />
           </div>
         </TabPane>
@@ -144,7 +143,7 @@ export default function Home() {
       <div className="container-fluid bg-cpt pl-0 pr-0">
 
 
-        <video autoPlay="true" muted
+        <video autoPlay={true} muted
           className="video"
           loop id="myVideo">
           <source src="https://www.helium.bg/wp-content/uploads/2021/06/intro-0-20.webm"
@@ -153,7 +152,7 @@ export default function Home() {
         </video>
 
         <div className="pt-5 text-white text-center" style={{ position: "relative" }}>
-          <header className="py-5 mt-5">
+          <div className="py-5 mt-5">
             <h2 className="display-4">Welcome to</h2>
             <h1 className="" style={{ fontWeight: 900, letterSpacing: '2px', fontSize: '50px' }}>Central Park Tours</h1>
             <hr className="home-hr"></hr>
@@ -164,8 +163,7 @@ export default function Home() {
             <p className="lead mb-0">
               <b>Reserve your tour now and explore the oasis in the middle of Manhattan.</b>
             </p>
-
-          </header>
+          </div>
 
           <section className="pt-5">
             <span className="btn-explore mx-auto">
@@ -176,32 +174,16 @@ export default function Home() {
               <i className="fa fa-phone fa-rotate-90" aria-hidden="true"></i>
               <span className="pl-2">Book over the phone: (347) 746-8687</span>
             </div>
-
           </section>
 
-
           <section className="container text-dark pt1">
-
-            {/* <div className="row justify-content-between">
-              <div className="col-4">
-                <div>Check out our</div>
-                <h2 style={{ fontWeight: 800 }}><b style={{ color: '#9bd230' }}>Featured </b>tours</h2>
-
-              </div>
-              <div className="col-4 font-weight-bold text-uppercase bbottom">
-                View All
-              </div>
-            </div> */}
             <div className="ml-5 mr-5">
               <div className="d-flex justify-content-start text-1">Check out our</div>
               <div className="d-flex justify-content-start">
                 <h2 style={{ fontWeight: 800 }}><b style={{ color: '#88bc2c' }}>Featured </b>tours</h2>
               </div>
               <div className="d-flex justify-content-end font-weight-bold text-uppercase bbottom">View All</div>
-
             </div>
-
-
 
             {/* cards */}
             <div className="card-group pt-3">
@@ -361,8 +343,7 @@ export default function Home() {
               </div>
 
               <div className="col">
-
-                {/* <form onSubmit={handleSubmit} className="contact-form">
+                <form onSubmit={handleSubmit} className="contact-form">
                   <ReCAPTCHA
                     ref={recaptchaRef}
                     size="invisible"
@@ -386,9 +367,7 @@ export default function Home() {
                   </textarea>
 
                   <button className="btn-contact text-uppercase mt-5">Submit Request</button>
-                </form> */}
-
-
+                </form>
               </div>
 
 
@@ -403,3 +382,7 @@ export default function Home() {
     </div >
   )
 }
+
+  // if (typeof window === 'undefined') {
+  //   global.window = {}
+  // }
