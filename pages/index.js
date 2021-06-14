@@ -43,9 +43,9 @@ export default function Home() {
     global.window = {}
   }
   //force scroll to top on page refresh
-  window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-  }
+  // window.onbeforeunload = function () {
+  //   window.scrollTo(0, 0);
+  // }
 
   const [menu, setMenu] = useState(false);
   const [scrollY, setScrollY] = useState(0);
