@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import 'bootstrap/dist/css/bootstrap.min.css'
+// import 'bootstrap/dist/css/bootstrap.min.css'
 // import styles from '../styles/Home.module.css'
 import React, { useState, useEffect } from 'react'
 
@@ -77,11 +77,11 @@ export default function Home() {
           <section className="pt-5">
             <span className="btn-explore mx-auto">
               EXPLORE THE TOURS
-            <i style={{ color: '#9bd230' }} className="pl-2 fas fa-arrow-circle-down"></i>
+              <i style={{ color: '#9bd230' }} className="pl-2 fas fa-arrow-circle-down"></i>
             </span>
             <div className="pt-4 mx-auto">
               <i className="fa fa-phone fa-rotate-90" aria-hidden="true"></i>
-               Book over the phone: (347) 746-8687
+              Book over the phone: (347) 746-8687
             </div>
 
           </section>

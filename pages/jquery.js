@@ -6,7 +6,7 @@ import Head from 'next/head'
 // import bootstrapBundle from '../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js';
 
 // import 'bootstrap/dist/css/bootstrap.min.css'
-const bootstrap = dynamic(() => import('bootstrap'), { ssr: false })
+// const bootstrap = dynamic(() => import('bootstrap'), { ssr: false })
 
 
 const Jquery = () => {
@@ -67,7 +67,7 @@ const Jquery = () => {
                             <h1 class="display-4">Transparent Navbar</h1>
                             <p class="lead mb-0">Using Bootstrap 4 and Javascript, create a transparent navbar which changes its style on scroll.</p>
                             <p class="lead mb-0">Snippet by
-                <a href="https://bootstrapious.com" class="text-white">
+                                <a href="https://bootstrapious.com" class="text-white">
                                     <u>Bootstrapious</u></a>
                             </p>
                         </header>
