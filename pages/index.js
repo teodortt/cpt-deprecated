@@ -49,8 +49,9 @@ export default function Home() {
 
   useEffect(() => {
     $(function () {
-      $(window).on('scroll', function () {
-        if ($(window).width() > 991) {
+      if ($(window).width() > 991) {
+
+        $(window).on('scroll', function () {
 
           if ($(window).scrollTop() > 10) {
             $('.navbar').addClass('active');
@@ -59,13 +60,12 @@ export default function Home() {
           } else {
             $('.navbar').removeClass('active');
             $('#cpt-logo').attr("src", '/images/logo-white-full.png').attr("width", "150");
-
           }
-        } else {
-          $('.navbar').addClass('active');
-          $('#cpt-logo').attr("src", '/images/logo-green.png').attr("width", "100");
-        }
-      });
+        });
+      } else {
+        $('.navbar').addClass('active');
+        $('#cpt-logo').attr("src", '/images/logo-green.png').attr("width", "100");
+      }
     });
   });
 
