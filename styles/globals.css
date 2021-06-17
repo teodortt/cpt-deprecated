@@ -444,3 +444,151 @@ textarea {
 .splide__arrow--next {
   background: white;
 } */
+
+/* footer {
+  bottom: 0;
+  height: 300px;
+  width: 100%;
+  background: #f9f9f8;
+} */
+
+/*footer*/
+
+.col_white_amrc {
+  color: #888888;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+footer {
+  width: 100%;
+  color: #888888;
+  background-color: #f9f9f8;
+  min-height: 250px;
+  padding: 10px 0px 25px 0px;
+}
+
+.pt2 {
+  padding-top: 40px;
+  margin-bottom: 20px;
+}
+
+footer p {
+  font-size: 13px;
+  color: #888888;
+  padding-bottom: 0px;
+  margin-bottom: 8px;
+}
+
+.mb10 {
+  padding-bottom: 15px;
+}
+
+.footer_ul_amrc {
+  margin: 0px;
+  list-style-type: none;
+  font-size: 13px;
+  padding: 0px 0px 10px 0px;
+}
+
+.footer_ul_amrc li {
+  padding: 0px 0px 5px 0px;
+}
+
+.footer_ul_amrc li a {
+  color: #888888;
+}
+
+.footer_ul_amrc li a:hover {
+  color: rgb(24, 99, 45);
+  text-decoration: none;
+}
+
+.fleft {
+  float: left;
+}
+
+.padding-right {
+  padding-right: 10px;
+}
+
+.footer_ul2_amrc {
+  margin: 0px;
+  list-style-type: none;
+  padding: 0px;
+}
+
+.footer_ul2_amrc li p {
+  display: table;
+}
+
+.footer_ul2_amrc li a:hover {
+  text-decoration: none;
+}
+
+.footer_ul2_amrc li i {
+  margin-top: 5px;
+}
+
+.bottom_border {
+  border-bottom: 1px solid #e7e7e7;
+  padding-bottom: 20px;
+}
+
+.foote_bottom_ul_amrc {
+  list-style-type: none;
+  padding: 0px;
+  display: table;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-bottom: 10px;
+  margin-left: auto;
+}
+
+.foote_bottom_ul_amrc li {
+  display: inline;
+}
+
+.foote_bottom_ul_amrc li a {
+  color: #888888;
+  margin: 0 12px;
+}
+
+.social_f {
+  display: table;
+  margin: 15px auto 0 -42px;
+  list-style-type: none;
+}
+
+.social_f_ul li {
+  padding-left: 20px;
+  padding-top: 10px;
+  float: left;
+}
+
+.social_f li a {
+  color: rgb(255, 255, 255);
+  /* border: 1px solid #CCC; */
+  background-color: rgb(120, 109, 109);
+  /* padding: 1px; */
+  border-radius: 50%;
+}
+
+.social_f li i {
+  width: 22px;
+  height: 20px;
+  text-align: center;
+}
+
+.post-title {
+  /* style={{ marginTop: 290, fontWeight: 800, fontSize: 16 }} */
+  margin-top: 290px;
+  font-weight: 800;
+  font-size: 16px;
+}
+
+@media (max-width: 600px) {
+  .post-title {
+    font-size: 12px;
+  }
+}

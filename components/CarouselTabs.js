@@ -44,7 +44,7 @@ const CarouselTabs = () => {
                     },
                 },
 
-                type: 'loop',
+                // type: 'loop',
                 padding: {
                     right: '5rem',
                     left: '5rem',
@@ -54,8 +54,10 @@ const CarouselTabs = () => {
 
             {data.map((data, i) => (
                 <SplideSlide key={i} className="brd my-5">
+
                     <img src={data.feature_image} alt="Image 1" />
-                    {/* <p style={{ marginTop: 200 }}>{data.title}</p> */}
+                    <p className="post-title">{data.title}</p>
+
                 </SplideSlide>
             ))}
 
