@@ -31,5 +31,10 @@ module.exports = withPlugins([
             preset: 'default',
             quality: 75,
         },
+        images: {
+            loader: 'imgix',
+            path: '/',
+        },
+
     }],
 ]);
