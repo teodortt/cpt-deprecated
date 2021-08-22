@@ -67,7 +67,7 @@ export default function Home() {
         <video autoPlay={true} muted
           className="video"
           loop id="myVideo">
-          <source src="/images/intro-0-20.webm"
+          <source src="https://www.helium.bg/wp-content/uploads/2021/06/intro-0-20.webm"
 
             type="video/mp4" />
         </video>
@@ -98,178 +98,67 @@ export default function Home() {
           </section>
 
           <section className="container text-dark pt1">
-            <div className="row justify-content-center">
-              <div className="col-md-9">
-                {/* <div className="ml-5 mr-5"> */}
-                <div className="d-flex text-1">Check out our</div>
-                <div className="d-flex">
-                  <h2 style={{ fontWeight: 800 }}><b style={{ color: '#88bc2c' }}>Featured </b>tours</h2>
-                </div>
-                <div className="d-flex justify-content-end font-weight-bold text-uppercase bbottom">View All</div>
+            <div className="ml-5 mr-5">
+              <div className="d-flex justify-content-start text-1">Check out our</div>
+              <div className="d-flex justify-content-start">
+                <h2 style={{ fontWeight: 800 }}><b style={{ color: '#88bc2c' }}>Featured </b>tours</h2>
               </div>
+              <div className="d-flex justify-content-end font-weight-bold text-uppercase bbottom">View All</div>
             </div>
 
-            <div className="row justify-content-center">
-              <div className="col-md-10">
+            {/* cards */}
+            <div className="card-group pt-3">
 
-                {/* cards */}
-                <div className="card-group pt-3">
+              <div className="card card-v">
+                <span className="d-flex justify-content-center">
+                  <div className="mr-5 mt-3 trending text-uppercase">Trending</div>
+                  <div className="ml-5 mt-3 font-weight-bold text-muted">$53/2h</div>
+                </span>
+                <small style={{ marginLeft: 180, marginTop: '-7px', color: '#babbbb' }}>per person</small>
 
-                  <div className="card card-v mx-4">
-
-
-                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                      <div class="carousel-inner">
-                        <div class="carousel-item active">
-                          <img class="d-block w-100 card-img-top1" src="/images/bike-tour-central-park.jpg" alt="First slide" />
-
-                        </div>
-                        <div class="carousel-item">
-                          <img class="d-block w-100 card-img-top1" src="/images/bike-tour-central-park.jpg" alt="Second slide" />
-                        </div>
-                        <div class="carousel-item">
-                          <img class="d-block w-100 card-img-top1" src="/images/bike-tour-central-park.jpg" alt="Third slide" />
-                        </div>
-                      </div>
-                      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                      </a>
-                      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                      </a>
-                    </div>
-
-                    <div className="card-body" style={{ marginTop: -20 }}>
-                      <h5 style={{ color: '#535150', fontSize: '18px' }} className="card-title text-left text-uppercase font-weight-bold pt-3 pb-1">Central Park Bike Tour</h5>
-
-                      <div className="row text-uppercase pb-4">
-                        <div style={{ fontSize: 12 }} className="col text-left ">Price from <b style={{ fontSize: 18 }}>$59</b> usd</div>
-                        <div style={{ fontSize: 12 }} className="col text-right">Duration <b> 2h</b></div>
-                      </div>
-
-                      <p style={{ fontSize: 14 }} className="text-left">
-                        Our bicycle tour has been ranked as one the top 5
-                        things to do in Central Park by TripAdvisor. It is the
-                        only tour that covers the entire length of Central
-                        Park and it provides an excellent overview of the
-                        whole park.
-                      </p>
-
-                      <div className="row text-uppercase">
-                        <div style={{ fontSize: 12 }} className="col text-left ">Intensity</div>
-                        <div style={{ fontSize: 12 }} className="col text-right">Rating 5.0</div>
-                      </div>
-
-                      <div className="row text-uppercase pb-4">
-                        <div style={{ fontSize: 12 }} className="col text-left "><b>Active</b></div>
-                        <div style={{ fontSize: 16 }} className="col text-right">
-                          <span class="fa fa-star checked"></span>
-                          <span class="fa fa-star checked"></span>
-                          <span class="fa fa-star checked"></span>
-                          <span class="fa fa-star checked"></span>
-                          <span class="fa fa-star checked"></span>
-                        </div>
-                      </div>
-
-                      <div className="row text-uppercase pb-4">
-                        <div style={{ fontSize: 12, color: 'silver', fontWeight: 'bold' }} className="col text-left pt-3">
-                          View tour
-                        </div>
-                        <div style={{ fontSize: 12 }} className="col">
-                          <p className="btn-reserve">Book now</p>
-                        </div>
-                      </div>
-
-
-                    </div>
-                  </div>
-
-                  <div className="card card-v mx-4">
-
-
-                    <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel">
-                      <div class="carousel-inner">
-                        <div class="carousel-item active">
-                          <img class="d-block w-100 card-img-top1" src="/images/pedicab-tour-central-park.jpg" alt="First slide" />
-
-                        </div>
-                        <div class="carousel-item">
-                          <img class="d-block w-100 card-img-top1" src="/images/pedicab-tour-central-park.jpg" alt="Second slide" />
-                        </div>
-                        <div class="carousel-item">
-                          <img class="d-block w-100 card-img-top1" src="/images/pedicab-tour-central-park.jpg" alt="Third slide" />
-                        </div>
-                      </div>
-                      <a class="carousel-control-prev" href="#carouselExampleControls2" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                      </a>
-                      <a class="carousel-control-next" href="#carouselExampleControls2" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                      </a>
-                    </div>
-
-                    <div className="card-body" style={{ marginTop: -20 }}>
-                      <h5 style={{ color: '#535150', fontSize: '18px' }} className="card-title text-left text-uppercase font-weight-bold pt-3 pb-1">Central Park Pedicab Tour</h5>
-
-                      <div className="row text-uppercase pb-4">
-                        <div style={{ fontSize: 12 }} className="col text-left ">Price from <b style={{ fontSize: 18 }}>$53</b> usd</div>
-                        <div style={{ fontSize: 12 }} className="col text-right">Duration <b> 1h</b></div>
-                      </div>
-
-                      <p style={{ fontSize: 14 }} className="text-left">
-                        Our bicycle tour has been ranked as one the top 5
-                        things to do in Central Park by TripAdvisor. It is the
-                        only tour that covers the entire length of Central
-                        Park and it provides an excellent overview of the
-                        whole park.
-                      </p>
-
-                      <div className="row text-uppercase">
-                        <div style={{ fontSize: 12 }} className="col text-left ">Intensity</div>
-                        <div style={{ fontSize: 12 }} className="col text-right">Rating 5.0</div>
-                      </div>
-
-                      <div className="row text-uppercase pb-4">
-                        <div style={{ fontSize: 12 }} className="col text-left "><b>Active</b></div>
-                        <div style={{ fontSize: 16 }} className="col text-right">
-                          <span class="fa fa-star checked"></span>
-                          <span class="fa fa-star checked"></span>
-                          <span class="fa fa-star checked"></span>
-                          <span class="fa fa-star checked"></span>
-                          <span class="fa fa-star checked"></span>
-                        </div>
-                      </div>
-
-                      <div className="row text-uppercase pb-4">
-                        <div style={{ fontSize: 12, color: 'silver', fontWeight: 'bold' }} className="col text-left pt-3">
-                          View tour
-                        </div>
-                        <div style={{ fontSize: 12 }} className="col">
-                          <p className="btn-reserve">Book now</p>
-                        </div>
-                      </div>
-
-
-                    </div>
-                  </div>
-
-                  <div className="container text-left pt-5" style={{ color: '#535150' }}>
-                    {/* <p style={{ fontSize: 25 }} className="d-flex justify-content-start pl-4 pt-5 mt-5">Our tours are top rated on Tripadvisor!</p>
-                    <b className="d-flex justify-content-start pl-4">SEE TESTIMONIALS</b> */}
-
-                    <p style={{ fontSize: 20 }} className="pl-3">Our tours are top rated on Tripadvisor!</p>
-                    <p className="pl-3 text-uppercase"><b>SEE TESTIMONIALS</b></p>
-
-                  </div>
-
-
+                <img className="card-img-top p-3" src="/images/bike-tours.png" alt="Card image cap" />
+                <div className="card-body" style={{ marginTop: -20 }}>
+                  <h5 style={{ color: '#535150' }} className="card-title font-weight-bold pb-3">Central Park E-Bike Tour</h5>
+                  <p className="btn-reserve text-uppercase">Reserve now</p>
                 </div>
               </div>
+
+              <div className="card card-v">
+                <span className="d-flex justify-content-center">
+                  <div className="mr-5 mt-3 trending text-uppercase">Trending</div>
+                  <div className="ml-5 mt-3 font-weight-bold text-muted">$53/2h</div>
+                </span>
+                <small style={{ marginLeft: 180, marginTop: '-7px', color: '#babbbb' }}>per person</small>
+
+                <img className="card-img-top p-3" src="/images/electric-bike.png" alt="Card image cap" />
+                <div className="card-body" style={{ marginTop: -20 }}>
+                  <h5 style={{ color: '#535150' }} className="card-title font-weight-bold pb-3">Central Park E-Bike Tour</h5>
+                  <p className="btn-reserve text-uppercase">Reserve now</p>
+                </div>
+              </div>
+
+              <div className="card card-v">
+                <span className="d-flex justify-content-center">
+                  {/* <div className="mr-5 mt-3 trending">Trending</div> */}
+                  <div style={{ marginLeft: 180 }} className="mt-3 font-weight-bold text-muted">$53/2h</div>
+                </span>
+                <small style={{ marginLeft: 180, marginTop: '-7px', color: '#babbbb' }}>per person</small>
+
+                <img className="card-img-top p-3" src="/images/pedicab-tours.png" alt="Card image cap" />
+                <div className="card-body" style={{ marginTop: -20 }}>
+                  <h5 style={{ color: '#535150' }} className="card-title font-weight-bold pb-3">Central Park E-Bike Tour</h5>
+                  <p className="btn-reserve text-uppercase">Reserve now</p>
+                </div>
+              </div>
+
             </div>
+            {/* end cards */}
+
+            <div className="container" style={{ color: '#535150', letterSpacing: '1px' }}>
+              <p style={{ fontSize: 25 }} className="d-flex justify-content-start pl-4 pt-5 mt-5">Our tours are top rated on Tripadvisor!</p>
+              <b className="d-flex justify-content-start pl-4">SEE TESTIMONIALS</b>
+            </div>
+
 
           </section>
 
@@ -304,19 +193,13 @@ export default function Home() {
                   <img src="/images/about.png" className="about-img" />
                 </div>
 
-                <div className="container pt-5 d-flex text-uppercase" style={{ paddingLeft: 100 }}>
-                  <div className="btn-about">Book a tour</div>
-                  <a className="pl-4 pt-2" href="google.bg"><b className="text-dark">Our Blog</b></a>
-
-                </div>
-
               </div>
 
-              {/* <div className="container pt-5 d-flex text-uppercase" style={{ paddingLeft: 100 }}>
+              <div className="container d-flex text-uppercase" style={{ paddingLeft: 100 }}>
                 <div className="btn-about">Book a tour</div>
-                <a className="pl-4 pt-2" href="google.bg"><b className="text-dark">Our Blog</b></a>
+                <a className="pt-2" href="google.bg"><b className="text-dark">Our Blog</b></a>
 
-              </div> */}
+              </div>
 
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f9f9f8" fill-opacity="1" d="M0,288L80,256C160,224,320,160,480,154.7C640,149,800,203,960,224C1120,245,1280,235,1360,229.3L1440,224L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
