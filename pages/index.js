@@ -64,13 +64,13 @@ export default function Home() {
       <div className="container-fluid bg-cpt pl-0 pr-0">
 
 
-        <video autoPlay={true} muted
+        {/* <video autoPlay={true} muted
           className="video"
           loop id="myVideo">
           <source src="/images/intro-0-20.webm"
 
             type="video/mp4" />
-        </video>
+        </video> */}
 
         <div className="pt-5 text-white text-center" style={{ position: "relative" }}>
           <div className="py-5 mt-5">
@@ -118,26 +118,26 @@ export default function Home() {
                   <div className="card card-v mx-4">
 
 
-                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                      <div class="carousel-inner">
-                        <div class="carousel-item active">
-                          <img class="d-block w-100 card-img-top1" src="/images/bike-tour-central-park.jpg" alt="First slide" />
+                    <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
+                      <div className="carousel-inner">
+                        <div className="carousel-item active">
+                          <img className="d-block w-100 card-img-top1" src="/images/bike-tour-central-park.jpg" alt="First slide" />
 
                         </div>
-                        <div class="carousel-item">
-                          <img class="d-block w-100 card-img-top1" src="/images/bike-tour-central-park.jpg" alt="Second slide" />
+                        <div className="carousel-item">
+                          <img className="d-block w-100 card-img-top1" src="/images/bike-tour-central-park.jpg" alt="Second slide" />
                         </div>
-                        <div class="carousel-item">
-                          <img class="d-block w-100 card-img-top1" src="/images/bike-tour-central-park.jpg" alt="Third slide" />
+                        <div className="carousel-item">
+                          <img className="d-block w-100 card-img-top1" src="/images/bike-tour-central-park.jpg" alt="Third slide" />
                         </div>
                       </div>
-                      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
+                      <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span className="sr-only">Previous</span>
                       </a>
-                      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
+                      <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span className="sr-only">Next</span>
                       </a>
                     </div>
 
@@ -165,11 +165,11 @@ export default function Home() {
                       <div className="row text-uppercase pb-4">
                         <div style={{ fontSize: 12 }} className="col text-left "><b>Active</b></div>
                         <div style={{ fontSize: 16 }} className="col text-right">
-                          <span class="fa fa-star checked"></span>
-                          <span class="fa fa-star checked"></span>
-                          <span class="fa fa-star checked"></span>
-                          <span class="fa fa-star checked"></span>
-                          <span class="fa fa-star checked"></span>
+                          <span className="fa fa-star checked"></span>
+                          <span className="fa fa-star checked"></span>
+                          <span className="fa fa-star checked"></span>
+                          <span className="fa fa-star checked"></span>
+                          <span className="fa fa-star checked"></span>
                         </div>
                       </div>
 
@@ -189,26 +189,26 @@ export default function Home() {
                   <div className="card card-v mx-4">
 
 
-                    <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel">
-                      <div class="carousel-inner">
-                        <div class="carousel-item active">
-                          <img class="d-block w-100 card-img-top1" src="/images/pedicab-tour-central-park.jpg" alt="First slide" />
+                    <div id="carouselExampleControls2" className="carousel slide" data-ride="carousel">
+                      <div className="carousel-inner">
+                        <div className="carousel-item active">
+                          <img className="d-block w-100 card-img-top1" src="/images/pedicab-tour-central-park.jpg" alt="First slide" />
 
                         </div>
-                        <div class="carousel-item">
-                          <img class="d-block w-100 card-img-top1" src="/images/pedicab-tour-central-park.jpg" alt="Second slide" />
+                        <div className="carousel-item">
+                          <img className="d-block w-100 card-img-top1" src="/images/pedicab-tour-central-park.jpg" alt="Second slide" />
                         </div>
-                        <div class="carousel-item">
-                          <img class="d-block w-100 card-img-top1" src="/images/pedicab-tour-central-park.jpg" alt="Third slide" />
+                        <div className="carousel-item">
+                          <img className="d-block w-100 card-img-top1" src="/images/pedicab-tour-central-park.jpg" alt="Third slide" />
                         </div>
                       </div>
-                      <a class="carousel-control-prev" href="#carouselExampleControls2" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
+                      <a className="carousel-control-prev" href="#carouselExampleControls2" role="button" data-slide="prev">
+                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span className="sr-only">Previous</span>
                       </a>
-                      <a class="carousel-control-next" href="#carouselExampleControls2" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
+                      <a className="carousel-control-next" href="#carouselExampleControls2" role="button" data-slide="next">
+                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span className="sr-only">Next</span>
                       </a>
                     </div>
 
@@ -236,11 +236,11 @@ export default function Home() {
                       <div className="row text-uppercase pb-4">
                         <div style={{ fontSize: 12 }} className="col text-left "><b>Active</b></div>
                         <div style={{ fontSize: 16 }} className="col text-right">
-                          <span class="fa fa-star checked"></span>
-                          <span class="fa fa-star checked"></span>
-                          <span class="fa fa-star checked"></span>
-                          <span class="fa fa-star checked"></span>
-                          <span class="fa fa-star checked"></span>
+                          <span className="fa fa-star checked"></span>
+                          <span className="fa fa-star checked"></span>
+                          <span className="fa fa-star checked"></span>
+                          <span className="fa fa-star checked"></span>
+                          <span className="fa fa-star checked"></span>
                         </div>
                       </div>
 
@@ -350,13 +350,13 @@ export default function Home() {
                   and many more!</p>
                 <br></br>
 
-                <div class="d-flex align-items-center">
+                <div className="d-flex align-items-center">
 
                   <div>
                     <div className="col-sm-1">
-                      <i class="fas fa-map-marker-alt fa-lg" style={{ paddingBottom: 70 }}></i>
+                      <i className="fas fa-map-marker-alt fa-lg" style={{ paddingBottom: 70 }}></i>
                       <br></br>
-                      <i class="fas fa-phone-alt fa-lg"></i>
+                      <i className="fas fa-phone-alt fa-lg"></i>
                     </div>
                   </div>
 
