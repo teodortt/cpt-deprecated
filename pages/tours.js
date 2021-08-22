@@ -64,16 +64,6 @@ export default function Tours() {
 
 
           <section className="container text-dark pt1-tours">
-            <div className="row justify-content-center">
-              <div className="col-md-9">
-                {/* <div className="ml-5 mr-5"> */}
-                <div className="d-flex text-1">Check out our</div>
-                <div className="d-flex">
-                  <h2 style={{ fontWeight: 800 }}><b style={{ color: '#88bc2c' }}>Featured </b>tours</h2>
-                </div>
-                <div className="d-flex justify-content-end font-weight-bold text-uppercase bbottom">View All</div>
-              </div>
-            </div>
 
             <div className="row justify-content-center">
               <div className="col-md-10">
