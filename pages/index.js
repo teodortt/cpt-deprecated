@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import ReCAPTCHA from "react-google-recaptcha"
 import NavBar from '../components/NavBar'
-import TabsComponent from '../components/TabsComponent'
+// import TabsComponent from '../components/TabsComponent'
 import Footer from '../components/Footer'
 
 export default function Home() {
@@ -331,7 +331,7 @@ export default function Home() {
                 <br></br>
                 concerts in the Summerstage, yoga in the park and many more.
               </p>
-              <TabsComponent />
+              {/* <TabsComponent /> */}
             </div>
           </section>
 
