@@ -748,3 +748,10 @@ footer p {
   height: 0.6rem;
   background: #80bf2f;
 }
+
+.readmore {
+  color: #01bdd4 !important;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}

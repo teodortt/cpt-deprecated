@@ -82,8 +82,7 @@ export default function AttractionList() {
                   The easiest way to see his portrait is to just take a look at a $10 bill. Considered to be a legal and financial mastermind, he is credited for introducing the US dollar, as well as establishing the National bank and the US Treasury.
 
                   He was George Washington's most trusted confidant during the American war of Independence.
-                  <br></br>
-                  <a>Read More</a>
+                  <a href="/" className="readmore"> Read More</a>
 
                   <div className="row d-flex pt-3 align-items-center">
                     <div className="col-sm-4">
@@ -115,6 +114,12 @@ export default function AttractionList() {
                     </div>
                   </div>
 
+                  <div className="row d-flex pt-3 align-items-center">
+                    <p className="col-sm-6 text-uppercase" style={{ fontWeight: '600' }}>You'll see on</p>
+                    <p className="col-sm-6 text-uppercase" style={{ fontWeight: '700' }}>Bike tour, Pedicab tour</p>
+
+                  </div>
+
                 </p>
               </div>
 
@@ -134,8 +139,45 @@ export default function AttractionList() {
                   Central Park is an amazing place for people of all ages, full of places and "characters" that can feel close to literally everyone!
                   Alice of Wonderland is probably the most famous fairytale character taking residence in Central Park. She has been around since 1959.
                   She is depicted in bronze, having a tea party hosted by the Matt Hater.
-                  <br></br>
-                  <a>Read More</a>
+                  <a href="/" className="readmore"> Read More</a>
+
+
+                  <div className="row d-flex pt-3 align-items-center">
+                    <div className="col-sm-4">
+                      <b>Accessibility 80%</b>
+                    </div>
+
+
+                    <div className="col-sm-8">
+
+                      <div className="ml-5 slide_percentage">
+                        <div className="slider_1"></div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div className="row d-flex pt-3 align-items-center">
+                    <div className="col-sm-4">
+                      <b>Popularity 30%</b>
+                    </div>
+
+
+                    <div className="col-sm-8">
+
+                      <div className="ml-5 slide_percentage">
+                        <div className="slider_2"></div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div className="row d-flex pt-3 align-items-center">
+                    <p className="col-sm-6 text-uppercase" style={{ fontWeight: '600' }}>You'll see on</p>
+                    <p className="col-sm-6 text-uppercase" style={{ fontWeight: '700' }}>Bike tour, Pedicab tour</p>
+
+                  </div>
+
                 </p>
               </div>
 
