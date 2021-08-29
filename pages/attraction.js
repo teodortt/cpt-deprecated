@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
 
-export default function Tours() {
+export default function Attraction() {
 
 
   useEffect(() => {
@@ -59,7 +59,7 @@ export default function Tours() {
 
           <section className="container text-dark pt1-tours">
 
-            <div className="row justify-content-center text-left">
+            <div className="row justify-content-center text-left pt-5">
               <div className="col-md-7 pb-5 pt-5">
 
                 <p>
