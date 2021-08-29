@@ -93,7 +93,7 @@ export default function AttractionList() {
 
                     <div className="col-sm-8">
 
-                      <div className="ml-5 slide">
+                      <div className="ml-5 slide_percentage">
                         <div className="slider_1"></div>
                       </div>
 
@@ -108,7 +108,7 @@ export default function AttractionList() {
 
                     <div className="col-sm-8">
 
-                      <div className="ml-5 slide">
+                      <div className="ml-5 slide_percentage">
                         <div className="slider_2"></div>
                       </div>
 
