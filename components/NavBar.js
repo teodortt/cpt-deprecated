@@ -3,6 +3,7 @@ import Head from 'next/head'
 const NavBar = () => (
     <>
         <Head>
+            <link href="https://fonts.googleapis.com/css2?family=Poppins" rel="stylesheet" />
             <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
             <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" type="text/javascript"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js" type="text/javascript"></script>
